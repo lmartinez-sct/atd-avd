@@ -11,7 +11,7 @@ eos_designs_documentation:
   p2p_links_csv: true
 
 # OOB Management network default gateway
-mgmt_gateway: 192.168.0.1
+mgmt_gateway: 172.16.1.1
 # If ATD is running cEOS, management interface is Management0
 # If ATD is running vEOS, management interface is Management1
 mgmt_interface: Management0

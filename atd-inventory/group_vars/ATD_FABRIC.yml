@@ -47,10 +47,10 @@ spine:
   nodes:
     - name: s1-spine1
       id: 1
-      mgmt_ip: 192.168.0.10/24
+      mgmt_ip: 172.16.1.10/24
     - name: s1-spine2
       id: 2
-      mgmt_ip: 192.168.0.11/24
+      mgmt_ip: 172.16.1.11/24
 
 # Leaf switch groups
 # A maximum of two nodes can form a leaf group
@@ -80,22 +80,22 @@ l3leaf:
       nodes:
         - name: s1-leaf1
           id: 1
-          mgmt_ip: 192.168.0.12/24
+          mgmt_ip: 172.16.1.12/24
           uplink_switch_interfaces: [Ethernet2, Ethernet2]
         - name: s1-leaf2
           id: 2
-          mgmt_ip: 192.168.0.13/24
+          mgmt_ip: 172.16.1.13/24
           uplink_switch_interfaces: [Ethernet3, Ethernet3]
     - group: pod2
       bgp_as: 65102
       nodes:
         - name: s1-leaf3
           id: 3
-          mgmt_ip: 192.168.0.14/24
+          mgmt_ip: 172.16.1.14/24
           uplink_switch_interfaces: [Ethernet4, Ethernet4]
         - name: s1-leaf4
           id: 4
-          mgmt_ip: 192.168.0.15/24
+          mgmt_ip: 172.16.1.15/24
           uplink_switch_interfaces: [Ethernet5, Ethernet5]
 
 #### Override for vEOS Lab Caveats ####
