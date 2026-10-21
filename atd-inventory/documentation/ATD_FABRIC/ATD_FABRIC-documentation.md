@@ -21,12 +21,12 @@
 
 | POD | Type | Node | Management IP | Platform | Provisioned in CloudVision | Serial Number |
 | --- | ---- | ---- | ------------- | -------- | -------------------------- | ------------- |
-| ATD_FABRIC | l3leaf | s1-leaf1 | 192.168.0.12/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | l3leaf | s1-leaf2 | 192.168.0.13/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | l3leaf | s1-leaf3 | 192.168.0.14/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | l3leaf | s1-leaf4 | 192.168.0.15/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | spine | s1-spine1 | 192.168.0.10/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | spine | s1-spine2 | 192.168.0.11/24 | cEOS | Provisioned | - |
+| ATD_FABRIC | l3leaf | s1-leaf1 | 172.16.1.12/24 | cEOS | Provisioned | - |
+| ATD_FABRIC | l3leaf | s1-leaf2 | 172.16.1.13/24 | cEOS | Provisioned | - |
+| ATD_FABRIC | l3leaf | s1-leaf3 | 172.16.1.14/24 | cEOS | Provisioned | - |
+| ATD_FABRIC | l3leaf | s1-leaf4 | 172.16.1.15/24 | cEOS | Provisioned | - |
+| ATD_FABRIC | spine | s1-spine1 | 172.16.1.10/24 | cEOS | Provisioned | - |
+| ATD_FABRIC | spine | s1-spine2 | 172.16.1.11/24 | cEOS | Provisioned | - |
 
 > Provision status is based on Ansible inventory declaration and do not represent real status from CloudVision.
 
@@ -38,7 +38,7 @@
 ## Fabric Topology
 
 | Type | Node | Node Interface | Peer Type | Peer Node | Peer Interface |
-| ---- | ---- | -------------- | --------- | ----------| -------------- |
+| ---- | ---- | -------------- | --------- | --------- | -------------- |
 | l3leaf | s1-leaf1 | Ethernet1 | mlag_peer | s1-leaf2 | Ethernet1 |
 | l3leaf | s1-leaf1 | Ethernet2 | spine | s1-spine1 | Ethernet2 |
 | l3leaf | s1-leaf1 | Ethernet3 | spine | s1-spine2 | Ethernet2 |
@@ -109,18 +109,18 @@
 
 ### Connected Endpoint Keys
 
-| Key | Type | Description |
-| --- | ---- | ----------- |
+| Key | Default Type | Description |
+| --- | ------------ | ----------- |
 | servers | server | Server |
 
 ### Servers
 
-| Name | Port | Fabric Device | Fabric Port | Description | Shutdown | Mode | Access VLAN | Trunk Allowed VLANs | Profile |
-| ---- | ---- | ------------- | ------------| ----------- | -------- | ---- | ----------- | ------------------- | ------- |
-| s1-host1 | Eth1 | s1-leaf1 | Ethernet4 | SERVER_s1-host1_Eth1 | False | access | 110 | - | TENANT_A |
-| s1-host1 | Eth2 | s1-leaf2 | Ethernet4 | SERVER_s1-host1_Eth2 | False | access | 110 | - | TENANT_A |
-| s1-host2 | Eth1 | s1-leaf3 | Ethernet4 | SERVER_s1-host2_Eth1 | False | access | 110 | - | TENANT_A |
-| s1-host2 | Eth2 | s1-leaf4 | Ethernet4 | SERVER_s1-host2_Eth2 | False | access | 110 | - | TENANT_A |
+| Name | Type | Port | Fabric Device | Fabric Port | Description | Shutdown | Mode | Access VLAN | Trunk Allowed VLANs | Profile |
+| ---- | ---- | ---- | ------------- | ----------- | ----------- | -------- | ---- | ----------- | ------------------- | ------- |
+| s1-host1 | server | Eth1 | s1-leaf1 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
+| s1-host1 | server | Eth2 | s1-leaf2 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
+| s1-host2 | server | Eth1 | s1-leaf3 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
+| s1-host2 | server | Eth2 | s1-leaf4 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
 
 ### Port Profiles
 

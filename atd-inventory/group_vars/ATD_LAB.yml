@@ -14,11 +14,13 @@ eos_designs_documentation:
 mgmt_gateway: 172.16.1.1
 # If ATD is running cEOS, management interface is Management0
 # If ATD is running vEOS, management interface is Management1
-mgmt_interface: Management0
-mgmt_interface_vrf: default
+mgmt_interface_settings:
+  interface: Management0
+  vrf: default
 
-name_servers:
-  - 192.168.2.1
-  - 8.8.8.8
+dns_settings:
+  servers:
+    - ip_address: 192.168.2.1
+    - ip_address: 8.8.8.8
 
 dns_domain: atd.lab

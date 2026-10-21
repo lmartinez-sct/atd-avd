@@ -42,7 +42,7 @@ all:
             ATD_LEAFS:
 
   vars:
-    ansible_user: arista
+    ansible_user: admin
     ansible_password: "{{ lookup('env', 'LABPASSPHRASE') }}"
     ansible_network_os: arista.eos.eos
     # Configure privilege escalation
