@@ -4,7 +4,7 @@ all:
     cv_servers:
       hosts:
         cv_atd1:
-          ansible_host: 192.168.0.5
+          ansible_host: 172.16.1.5
           cv_collection: v3
     ATD_LAB:
       children:
@@ -15,9 +15,9 @@ all:
                 type: spine
               hosts:
                 s1-spine1:
-                  ansible_host: 192.168.0.10
+                  ansible_host: 172.16.1.10
                 s1-spine2:
-                  ansible_host: 192.168.0.11
+                  ansible_host: 172.16.1.11
             ATD_LEAFS:
               vars:
                 type: l3leaf
@@ -25,15 +25,15 @@ all:
                 pod1:
                   hosts:
                     s1-leaf1:
-                      ansible_host: 192.168.0.12
+                      ansible_host: 172.16.1.12
                     s1-leaf2:
-                      ansible_host: 192.168.0.13
+                      ansible_host: 172.16.1.13
                 pod2:
                   hosts:
                     s1-leaf3:
-                      ansible_host: 192.168.0.14
+                      ansible_host: 172.16.1.14
                     s1-leaf4:
-                      ansible_host: 192.168.0.15
+                      ansible_host: 172.16.1.15
         ATD_TENANTS_NETWORKS:
           children:
             ATD_LEAFS:
