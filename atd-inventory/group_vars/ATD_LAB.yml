@@ -24,3 +24,10 @@ dns_settings:
     - ip_address: 8.8.8.8
 
 dns_domain: atd.lab
+
+aaa_settings:
+  local_users:
+    - name: admin
+      privilege: 15
+      role: network-admin
+      sha512_password: "$6$V6zLB/goiUXjU0l.$6RyGMTBsH.pyeDc6oqHdyvJNNUgQJv4bRCVZsy3fTEmkxQ5w2.mhqJAmCeKA6U4RDmOW0r4XTWfFm9vpmKKYi/"
