@@ -25,8 +25,8 @@
 | ATD_FABRIC | l3leaf | s1-leaf2 | 172.16.1.13/24 | vEOS | Provisioned | - |
 | ATD_FABRIC | l3leaf | s1-leaf3 | 172.16.1.14/24 | vEOS | Provisioned | - |
 | ATD_FABRIC | l3leaf | s1-leaf4 | 172.16.1.15/24 | vEOS | Provisioned | - |
-| ATD_FABRIC | spine | s1-spine1 | 172.16.1.10/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | spine | s1-spine2 | 172.16.1.11/24 | cEOS | Provisioned | - |
+| ATD_FABRIC | spine | s1-spine1 | 172.16.1.10/24 | vEOS | Provisioned | - |
+| ATD_FABRIC | spine | s1-spine2 | 172.16.1.11/24 | vEOS | Provisioned | - |
 
 > Provision status is based on Ansible inventory declaration and do not represent real status from CloudVision.
 
