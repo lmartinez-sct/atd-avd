@@ -61,7 +61,7 @@ ethernet_interfaces:
 hostname: s1-leaf4
 ip_domain_lookup:
   source_interfaces:
-  - name: Management1
+  - name: Management0
 ip_igmp_snooping:
   globally_enabled: true
 ip_name_server:
@@ -87,7 +87,7 @@ loopback_interfaces:
   vrf: Tenant_A_OP_Zone
   ip_address: 10.255.1.6/32
 management_interfaces:
-- name: Management1
+- name: Management0
   description: OOB_MANAGEMENT
   shutdown: false
   vrf: default
@@ -96,7 +96,7 @@ management_interfaces:
   gateway: 172.16.1.1
 metadata:
   is_deployed: true
-  platform: cEOS
+  platform: vEOS
   fabric_name: ATD_FABRIC
   validate_hardware:
     enabled: false

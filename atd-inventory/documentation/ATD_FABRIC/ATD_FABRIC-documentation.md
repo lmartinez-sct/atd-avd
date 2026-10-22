@@ -21,10 +21,10 @@
 
 | POD | Type | Node | Management IP | Platform | Provisioned in CloudVision | Serial Number |
 | --- | ---- | ---- | ------------- | -------- | -------------------------- | ------------- |
-| ATD_FABRIC | l3leaf | s1-leaf1 | 172.16.1.12/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | l3leaf | s1-leaf2 | 172.16.1.13/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | l3leaf | s1-leaf3 | 172.16.1.14/24 | cEOS | Provisioned | - |
-| ATD_FABRIC | l3leaf | s1-leaf4 | 172.16.1.15/24 | cEOS | Provisioned | - |
+| ATD_FABRIC | l3leaf | s1-leaf1 | 172.16.1.12/24 | vEOS | Provisioned | - |
+| ATD_FABRIC | l3leaf | s1-leaf2 | 172.16.1.13/24 | vEOS | Provisioned | - |
+| ATD_FABRIC | l3leaf | s1-leaf3 | 172.16.1.14/24 | vEOS | Provisioned | - |
+| ATD_FABRIC | l3leaf | s1-leaf4 | 172.16.1.15/24 | vEOS | Provisioned | - |
 | ATD_FABRIC | spine | s1-spine1 | 172.16.1.10/24 | cEOS | Provisioned | - |
 | ATD_FABRIC | spine | s1-spine2 | 172.16.1.11/24 | cEOS | Provisioned | - |
 

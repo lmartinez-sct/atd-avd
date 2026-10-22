@@ -57,19 +57,19 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management1 | OOB_MANAGEMENT | oob | default | 172.16.1.12/24 | 172.16.1.1 |
+| Management0 | OOB_MANAGEMENT | oob | default | 172.16.1.12/24 | 172.16.1.1 |
 
 ##### IPv6
 
 | Management Interface | Description | Type | VRF | IPv6 Address | IPv6 Gateway | ND RA Disabled | ND RA RX Accept | ND Managed Config Flag | ND Other Config Flag | ND Cache | ND RA DNS Servers |
 | -------------------- | ----------- | ---- | --- | ------------ | ------------ | -------------- | --------------- | ---------------------- | -------------------- | -------- | ----------------- |
-| Management1 | OOB_MANAGEMENT | oob | default | - | - | - | - | - | - | - | - |
+| Management0 | OOB_MANAGEMENT | oob | default | - | - | - | - | - | - | - | - |
 
 #### Management Interfaces Device Configuration
 
 ```eos
 !
-interface Management1
+interface Management0
    description OOB_MANAGEMENT
    no shutdown
    ip address 172.16.1.12/24
@@ -97,12 +97,12 @@ ip name-server vrf default 192.168.2.1
 
 | Source interface | vrf |
 | ---------------- | --- |
-| Management1 | - |
+| Management0 | - |
 
 #### DNS Domain Lookup Device Configuration
 
 ```eos
-ip domain lookup source-interface Management1
+ip domain lookup source-interface Management0
 ```
 
 ## Authentication
