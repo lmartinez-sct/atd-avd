@@ -8,3 +8,6 @@
     - name: Run ANTA on EOS devies
       import_role:
         name: arista.avd.anta_runner
+      vars:
+        avd_catalogs_enabled: true
+        avd_catalogs_extra_validation: true
