@@ -263,7 +263,7 @@ vlan 4094
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
 | Ethernet1 | MLAG_s1-leaf3_Ethernet1 | *trunk | *- | *- | *MLAG | 1 |
-| Ethernet4 | SERVER_s1-host2_Eth2 | *access | *110 | *- | *- | 4 |
+| Ethernet4 | SERVER_s1-ubuntu2_Eth2 | *access | *110 | *- | *- | 4 |
 | Ethernet6 | MLAG_s1-leaf3_Ethernet6 | *trunk | *- | *- | *MLAG | 1 |
 
 *Inherited from Port-Channel Interface
@@ -299,7 +299,7 @@ interface Ethernet3
    ip address 172.30.255.15/31
 !
 interface Ethernet4
-   description SERVER_s1-host2_Eth2
+   description SERVER_s1-ubuntu2_Eth2
    no shutdown
    channel-group 4 mode active
 !

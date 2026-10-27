@@ -117,10 +117,10 @@
 
 | Name | Type | Port | Fabric Device | Fabric Port | Description | Shutdown | Mode | Access VLAN | Trunk Allowed VLANs | Profile |
 | ---- | ---- | ---- | ------------- | ----------- | ----------- | -------- | ---- | ----------- | ------------------- | ------- |
-| s1-host1 | server | Eth1 | s1-leaf1 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
-| s1-host1 | server | Eth2 | s1-leaf2 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
-| s1-host2 | server | Eth1 | s1-leaf3 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
-| s1-host2 | server | Eth2 | s1-leaf4 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
+| s1-ubuntu1 | server | Eth1 | s1-leaf1 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
+| s1-ubuntu1 | server | Eth2 | s1-leaf2 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
+| s1-ubuntu2 | server | Eth1 | s1-leaf3 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
+| s1-ubuntu2 | server | Eth2 | s1-leaf4 | Port-Channel4(Ethernet4) | PortChannel | False | access | 110 | - | TENANT_A |
 
 ### Port Profiles
 

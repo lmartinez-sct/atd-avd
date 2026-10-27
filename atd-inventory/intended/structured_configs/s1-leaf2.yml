@@ -47,13 +47,13 @@ ethernet_interfaces:
   switchport:
     enabled: false
 - name: Ethernet4
-  description: SERVER_s1-host1_Eth2
+  description: SERVER_s1-ubuntu1_Eth2
   shutdown: false
   channel_group:
     id: 4
     mode: active
   metadata:
-    peer: s1-host1
+    peer: s1-ubuntu1
     peer_interface: Eth2
     peer_type: server
     peer_key: servers

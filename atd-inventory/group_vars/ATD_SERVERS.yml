@@ -6,7 +6,7 @@ port_profiles:
 
 
 servers:
-  - name: s1-host1
+  - name: s1-ubuntu1
     rack: pod1
     adapters:
       - endpoint_ports: [Eth1, Eth2]
@@ -17,7 +17,7 @@ servers:
           description: PortChannel
           mode: active
 
-  - name: s1-host2
+  - name: s1-ubuntu2
     rack: pod2
     adapters:
       - endpoint_ports: [Eth1, Eth2]
