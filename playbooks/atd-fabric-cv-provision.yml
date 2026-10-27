@@ -1,0 +1,14 @@
+---
+- name: Configuration deployment with CvaaS
+  hosts: ATD_FABRIC
+  gather_facts: false
+  tasks:
+
+  tasks:
+      - name: Deploy configurations to CloudVision
+        ansible.builtin.import_role:
+          name: arista.avd.cv_deploy
+        vars:
+          cv_server: <hostname or IP address of CloudVision host>
+          cv_token: <insert service_account token here - use Ansible Vault>
+          cv_run_change_control: true
