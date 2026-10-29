@@ -1,0 +1,14 @@
+copy flash:TerminAttr-1.40.5-1.swix extension:
+extension TerminAttr-1.40.5-1.swix
+copy installed-extensions boot-extensions
+
+
+#config
+
+daemon TerminAttr
+
+exec /usr/bin/TerminAttr -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -cvaddr=192.168.122.83:9910 -cvauth=token,/tmp/token -cvvrf=default -taillogs
+exec /usr/bin/TerminAttr -cvadd=192.168.122.83:9910 -cvauth=token,/tmp/token -cvvrf=default -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata,sysdb,mfa,lookupsu,ktrace -taillogs
+shutdown
+
+no shutdown
