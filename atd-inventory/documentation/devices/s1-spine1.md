@@ -6,10 +6,13 @@
   - [Management Interfaces](#management-interfaces)
   - [IP Name Servers](#ip-name-servers)
   - [Domain Lookup](#domain-lookup)
+  - [NTP](#ntp)
   - [Management API HTTP](#management-api-http)
 - [Authentication](#authentication)
   - [Local Users](#local-users)
   - [Enable Password](#enable-password)
+- [Monitoring](#monitoring)
+  - [TerminAttr Daemon](#terminattr-daemon)
 - [Spanning Tree](#spanning-tree)
   - [Spanning Tree Summary](#spanning-tree-summary)
   - [Spanning Tree Device Configuration](#spanning-tree-device-configuration)
@@ -92,6 +95,32 @@ ip name-server vrf default 192.168.2.1
 ip domain lookup source-interface Management0
 ```
 
+### NTP
+
+#### NTP Summary
+
+##### NTP Local Interface
+
+| Interface | VRF |
+| --------- | --- |
+| Management0 | default |
+
+##### NTP Servers
+
+NTP servers VRF: default
+
+| Server | Preferred | Burst | iBurst | Version | Min Poll | Max Poll | Local-interface | Source Address | Key |
+| ------ | --------- | ----- | ------ | ------- | -------- | -------- | --------------- | -------------- | --- |
+| time.google.com | True | - | - | - | - | - | - | - | - |
+
+#### NTP Device Configuration
+
+```eos
+!
+ntp local-interface Management0
+ntp server time.google.com prefer
+```
+
 ### Management API HTTP
 
 #### Management API HTTP Summary
@@ -140,6 +169,25 @@ username cvpadmin privilege 15 role network-admin secret sha512 <removed>
 ### Enable Password
 
 Enable password has been disabled
+
+## Monitoring
+
+### TerminAttr Daemon
+
+#### TerminAttr Daemon Summary
+
+| CV Compression | CloudVision Servers | VRF | Authentication | Smash Excludes | Ingest Exclude | Bypass AAA |
+| -------------- | ------------------- | --- | -------------- | -------------- | -------------- | ---------- |
+| gzip | 192.168.122.83:9910 | default | token,/tmp/token | ale,flexCounter,hardware,kni,pulse,strata,sysdb,mfa,lookupsu,ktrace | - | False |
+
+#### TerminAttr Daemon Device Configuration
+
+```eos
+!
+daemon TerminAttr
+   exec /usr/bin/TerminAttr -cvaddr=192.168.122.83:9910 -cvauth=token,/tmp/token -cvvrf=default -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata,sysdb,mfa,lookupsu,ktrace -taillogs -cvsourceintf=Management0 -flowdns=false
+   no shutdown
+```
 
 ## Spanning Tree
 

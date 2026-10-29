@@ -1,6 +1,17 @@
 aaa_root:
   disabled: true
 config_end: true
+daemon_terminattr:
+  cvaddrs:
+  - 192.168.122.83:9910
+  cvauth:
+    method: token
+    token_file: /tmp/token
+  cvsourceintf: Management0
+  cvvrf: default
+  disable_aaa: false
+  smashexcludes: ale,flexCounter,hardware,kni,pulse,strata,sysdb,mfa,lookupsu,ktrace
+  flowdns: false
 enable_password:
   disabled: true
 ethernet_interfaces:
@@ -91,6 +102,14 @@ metadata:
   fabric_name: ATD_FABRIC
   validate_hardware:
     enabled: false
+ntp:
+  local_interface:
+    name: Management0
+    vrf: default
+  servers:
+  - name: time.google.com
+    preferred: true
+  vrf: default
 prefix_lists:
 - name: PL-LOOPBACKS-EVPN-OVERLAY
   sequence_numbers:

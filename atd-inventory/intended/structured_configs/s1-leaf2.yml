@@ -1,6 +1,17 @@
 aaa_root:
   disabled: true
 config_end: true
+daemon_terminattr:
+  cvaddrs:
+  - 192.168.122.83:9910
+  cvauth:
+    method: token
+    token_file: /tmp/token
+  cvsourceintf: Management0
+  cvvrf: default
+  disable_aaa: false
+  smashexcludes: ale,flexCounter,hardware,kni,pulse,strata,sysdb,mfa,lookupsu,ktrace
+  flowdns: false
 enable_password:
   disabled: true
 ethernet_interfaces:
@@ -120,6 +131,14 @@ mlag_configuration:
   peer_link: Port-Channel1
   reload_delay_mlag: '300'
   reload_delay_non_mlag: '330'
+ntp:
+  local_interface:
+    name: Management0
+    vrf: default
+  servers:
+  - name: time.google.com
+    preferred: true
+  vrf: default
 port_channel_interfaces:
 - name: Port-Channel1
   description: MLAG_s1-leaf1_Port-Channel1

@@ -9,6 +9,7 @@
         ansible.builtin.import_role:
           name: arista.avd.cv_deploy
         vars:
-          cv_server: <hostname or IP address of CloudVision host>
-          cv_token: <insert service_account token here - use Ansible Vault>
-          cv_run_change_control: true
+          cv_server: 192.168.122.83
+          cv_token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkaWQiOjc3MDE3MjM1OTU1NjY3NDM3OTIsImRzbiI6ImF2ZCIsImRzdCI6ImFjY291bnQiLCJleHAiOjE3OTMzMTQ4MDAsImlhdCI6MTc5MzI2OTg1OSwib2dpIjozLCJvZ24iOiJEZWZhdWx0Iiwic2lkIjoiY2U3MWFiZDdjYzBlNjE3NjAzYmUzMDkxZTNjOTdlZWIxOWFmNTZkZGYyYTAwOGJiYTQ0NTJiMDJkY2M2MDdhZC0yUTlJeU5WN2Y5bnhlNlFGd1hpSW9sSEtqdURPWWZoYzF0SlkxUE9EIn0.ZxWnUWEGGVVHTSld8VuvaA_PhEjKu0IfFuAA5kv2aO8juSao1ugoEaR0YxqZmHPxGlWXW388Y_riT7m1WSUaeMDkQhAuUbFW5camkfstBQAJMJsFayVftN2MIv3eFxkuHObpjQ09uDFhgNUKdCIa1qOG5OvDGyQZco0uiT7RcCvV52vpBCBu5QeHiEGrujNbLdcQZyappV4qky0Xb-CU-LLVMBK9ECqYfPdlYsEjBBtrLkAZofLkv07SRIYwKl0sV92rQ-5syqieY8yWKcRfW3ItgBPs12xO7sLAMEKP5aFEtr9EVGAcKK76XXGBJKYiimpRxlvCXbgHPWGdB_cI5oR0yGQi814m-UbVaBq4mlXJkHKyzl1s0vl8FTQ8pB5SWUtCdEExmor9H5bSVd0Ddnl9BNApaVxETgs3ML_L7UAu7oGEqYytwe2v9k_47bMrbVgnaRYLF_z2GvxS92EToGGufuZ4VsiMtFfKK9cTMyG_Gd2pavMYVcvd8rAOfrpe6ERx29kQkytaJuXw7yZNmxfGy22426y_4W0iVYIlhQdvIVzhlp3xHsuzCGbQD3WIssm8jkDblQUkQ5rSPpBOnTKCr_rCmVNjzI1qCzYKN_YjvBuoTGaJeppJIyD5suLTgZfozuTtMN6wnVqdQLDe2VBhdZIfPKatZgxgshjHSXE
+          cv_run_change_control: false
+          cv_verify_certs: false
